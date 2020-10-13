@@ -56,7 +56,7 @@ namespace AtletikaiVerseny
                 if (i.Ugras > max)
                 {
                     max = i.Ugras;
-                    neve = i.Nev;
+                    neve = i.VezNev + " " + i.KerNev;
                 }
             }
             Console.WriteLine("4. feladat: Legnagyobb ugrás: \n" +
@@ -86,7 +86,7 @@ namespace AtletikaiVerseny
             StreamWriter iro = new StreamWriter("versenyzok.txt");
             foreach (var i in lista)
             {
-                iro.WriteLine("{0};{1}",i.Rajtszam,i.Nev);
+                iro.WriteLine("{0} {1}",i.Rajtszam);
             }
             iro.Close();
         }
