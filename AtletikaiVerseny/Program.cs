@@ -13,7 +13,7 @@ namespace AtletikaiVerseny
         static Dictionary<string, int> csapatok = new Dictionary<string, int>();
         static void Beolvas()
         {
-            StreamReader olvas = new StreamReader("tavol.cs");
+            StreamReader olvas = new StreamReader("tavol.csv");
             while (!olvas.EndOfStream)
             {
                 lista.Add(new Atleta(olvas.ReadLine()));

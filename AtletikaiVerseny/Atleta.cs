@@ -10,15 +10,16 @@
         public Atleta(string sor)
         {
             string[] adat = sor.Split(';');
-            Rajtszam = adat[0];           
-            Egyesulet = adat[1];
-            Ugras = int.Parse(adat[2]);
+            Rajtszam = adat[0];
+            Nev(adat[1]);
+            Egyesulet = adat[2];
+            Ugras = int.Parse(adat[3]);
         }
-        public string Nev()
+        public void Nev(string nev)
         {
-            string[] nev = sor.Split(' ');
-            VezNev = nev[0];//Ez a kettő egy
-            KerNev = nev[1];
+            string[] adat = nev.Split(' ');
+            VezNev = adat[0];//Ez a kettő egy
+            KerNev = adat[1];
         }
     }
 }
